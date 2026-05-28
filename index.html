@@ -1,1 +1,861 @@
-<html><body>test</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boody DTC · 26 May 2026</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;background:#F0EEE8;margin:0;padding:32px 16px}
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,800;1,9..144,400&family=DM+Sans:wght@400;600;700;800&display=swap');
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .region-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;padding:10px 14px;border-radius:12px;background:#F9FAFB;border:1px solid #F0F0EC;margin-bottom:8px;transition:all .2s}
+  .region-toggle:hover{background:#F0F0EC}
+  .region-body{display:none;padding:16px 14px;background:#fff;border-radius:0 0 12px 12px;border:1px solid #F0F0EC;border-top:none;margin-top:-8px;margin-bottom:8px}
+  .region-body.open{display:block}
+  .chevron{transition:transform .25s ease;font-size:12px;color:#9CA3AF}
+  .chevron.open{transform:rotate(180deg)}
+  .tab-bar{display:flex;gap:6px;background:#F3F4F6;border-radius:14px;padding:5px;margin-bottom:20px}
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;padding:10px 8px;border-radius:10px;border:none;cursor:pointer;background:transparent;transition:all .18s}
+  .tab.active{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .tab-label{font-size:12px;font-weight:800;color:#6B7280}
+  .tab.active .tab-label{color:#111827}
+  .mtd-panel{display:none}
+  .mtd-panel.active{display:block;animation:fadeIn .18s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#D1FAE5 30%,#D1FAE5 70%,transparent);margin:30px 0}
+  .section-bar{width:4px;height:28px;background:linear-gradient(180deg,#1E3A2F,#4A7C59);border-radius:4px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div style="max-width:760px;margin:0 auto">
+
+  <!-- HEADER -->
+  <div style="background:linear-gradient(140deg,#0D1F16 0%,#1E3A2F 60%,#163025 100%);border-radius:20px 20px 0 0;padding:32px 40px 28px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <div style="font-size:10px;color:#6EAF8C;letter-spacing:.2em;font-weight:700;text-transform:uppercase;margin-bottom:6px">Daily Performance Report</div>
+        <div class="serif" style="color:#fff;font-weight:800;font-size:30px;letter-spacing:-.02em;line-height:1.1">Boody DTC</div>
+        <div class="serif" style="color:#6EAF8C;font-style:italic;font-size:28px;letter-spacing:-.02em;line-height:1.1">Performance</div>
+      </div>
+      <div style="background:rgba(110,175,140,.13);border:1px solid rgba(110,175,140,.28);border-radius:14px;padding:14px 18px;text-align:right">
+        <div style="font-size:10px;color:#6EAF8C;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Reporting on</div>
+        <div style="font-size:16px;color:#fff;font-weight:700;margin-top:4px">Tuesday, 26 May 2026</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:3px">Day close · All values AUD</div>
+      </div>
+    </div>
+    <div style="margin-top:24px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:7px">
+        <span style="font-size:10px;color:#6EAF8C;font-weight:700;letter-spacing:.08em;text-transform:uppercase">MAY 2026 · DAY 26 OF 31</span>
+        <span style="font-size:10px;color:rgba(255,255,255,.35);font-weight:600">84% of month elapsed</span>
+      </div>
+      <div style="height:5px;background:rgba(255,255,255,.09);border-radius:4px;overflow:hidden">
+        <div style="height:100%;width:84%;background:linear-gradient(90deg,#3D7A56,#6EAF8C);border-radius:4px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div style="background:#FFFDF9;padding:32px 40px 40px;border-radius:0 0 20px 20px;box-shadow:0 20px 70px rgba(0,0,0,.12)">
+
+    <!-- SECTION 1: DAY CLOSE -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+      <div class="section-bar"></div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:#111827">Day Close</div>
+        <div style="font-size:11px;color:#9CA3AF;margin-top:2px">Tuesday, 26 May 2026 · Daily snapshot</div>
+      </div>
+    </div>
+
+    <!-- Global hero -->
+    <div style="background:linear-gradient(135deg,#0F2218 0%,#1E3A2F 50%,#1A3328 100%);border-radius:14px;padding:24px 28px;margin-bottom:16px">
+      <div style="font-size:10px;color:#A7D9C0;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px">🌏 GLOBAL · Day Close</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+        
+        <div style="">
+          <div style="font-size:22px;font-weight:800;color:#fff;font-family:Georgia,serif;letter-spacing:-.02em;line-height:1">$177K</div>
+          <div style="font-size:10px;color:rgba(167,217,192,.8);margin-top:5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em">Revenue</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:3px">avg $179K/day MTD</div>
+        </div>
+        <div style="border-left:1px solid rgba(255,255,255,.1);padding-left:20px">
+          <div style="font-size:22px;font-weight:800;color:#fff;font-family:Georgia,serif;letter-spacing:-.02em;line-height:1">$35K</div>
+          <div style="font-size:10px;color:rgba(167,217,192,.8);margin-top:5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em">Spend</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:3px">avg $34K/day MTD</div>
+        </div>
+        <div style="border-left:1px solid rgba(255,255,255,.1);padding-left:20px">
+          <div style="font-size:22px;font-weight:800;color:#fff;font-family:Georgia,serif;letter-spacing:-.02em;line-height:1">20.0%</div>
+          <div style="font-size:10px;color:rgba(167,217,192,.8);margin-top:5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em">MER %</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:3px">18.9% MTD</div>
+        </div>
+        <div style="border-left:1px solid rgba(255,255,255,.1);padding-left:20px">
+          <div style="font-size:22px;font-weight:800;color:#fff;font-family:Georgia,serif;letter-spacing:-.02em;line-height:1">1,718</div>
+          <div style="font-size:10px;color:rgba(167,217,192,.8);margin-top:5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em">Orders</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:3px">avg 1735/day MTD</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapsible region cards -->
+    
+      <button class="region-toggle" onclick="toggleRegion('ANZ')">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🇦🇺</span>
+          <span style="font-size:13px;font-weight:800;color:#111827">ANZ</span>
+          <span style="font-size:10px;font-weight:700;color:#3B82F6;background:#3B82F618;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em">$78K revenue</span>
+        </div>
+        <span class="chevron" id="chev-ANZ">▾</span>
+      </button>
+      <div class="region-body" id="body-ANZ">
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+          <div style="padding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$78K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Revenue</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $81K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$12K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Spend</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $10K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">15.0%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">MER %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">12.7% MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">744</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Orders</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 792/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">253</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 246/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">34.0%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">31.1% MTD</div>
+          </div>
+        </div>
+      </div>
+      <button class="region-toggle" onclick="toggleRegion('NA')">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🇺🇸</span>
+          <span style="font-size:13px;font-weight:800;color:#111827">NA</span>
+          <span style="font-size:10px;font-weight:700;color:#A855F7;background:#A855F718;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em">$47K revenue</span>
+        </div>
+        <span class="chevron" id="chev-NA">▾</span>
+      </button>
+      <div class="region-body" id="body-NA">
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+          <div style="padding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$47K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Revenue</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $56K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$13K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Spend</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $14K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">28.5%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">MER %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">24.8% MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">400</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Orders</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 486/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">252</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 275/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">63.0%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">56.6% MTD</div>
+          </div>
+        </div>
+      </div>
+      <button class="region-toggle" onclick="toggleRegion('UKEU')">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🇬🇧</span>
+          <span style="font-size:13px;font-weight:800;color:#111827">UKEU</span>
+          <span style="font-size:10px;font-weight:700;color:#0EA5E9;background:#0EA5E918;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em">$52K revenue</span>
+        </div>
+        <span class="chevron" id="chev-UKEU">▾</span>
+      </button>
+      <div class="region-body" id="body-UKEU">
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+          <div style="padding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$52K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Revenue</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $42K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">$10K</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Spend</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg $10K/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">19.8%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">MER %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">22.9% MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">574</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Orders</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 458/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">274</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">avg 219/day MTD</div>
+          </div><div style="border-left:1px solid #F3F4F6;padding-left:10pxpadding-right:8px">
+            <div style="font-size:15px;font-weight:800;color:#111827;font-family:Georgia,serif">47.7%</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:3px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">NC %</div>
+            <div style="font-size:10px;color:#CBD5E1;margin-top:2px">47.8% MTD</div>
+          </div>
+        </div>
+      </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 2: MTD with tabs -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <div class="section-bar"></div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:#111827">Month to Date</div>
+        <div style="font-size:11px;color:#9CA3AF;margin-top:2px">1–26 May · Pro-rated Target · Projected Month-End</div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div style="display:flex;gap:14px;margin-bottom:16px;align-items:center">
+      
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:#6B7280;font-weight:600">
+        <span style="width:8px;height:8px;border-radius:50%;background:#22C55E;display:inline-block"></span>On / Ahead
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:#6B7280;font-weight:600">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F59E0B;display:inline-block"></span>Within 10%
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:#6B7280;font-weight:600">
+        <span style="width:8px;height:8px;border-radius:50%;background:#EF4444;display:inline-block"></span>Off Target
+      </div>
+      <span style="font-size:11px;color:#9CA3AF;font-style:italic;margin-left:auto">MER% &amp; CAC: lower is better</span>
+    </div>
+
+    <!-- Region tabs -->
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab('global')" id="tab-global">
+          <span style="font-size:18px;margin-bottom:4px">🌏</span>
+          <span class="tab-label">Global</span>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:4px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>
+            <span style="font-size:10px;font-weight:700;color:#15803D">126.6%</span>
+          </div>
+          <div style="font-size:9px;color:#9CA3AF;margin-top:1px">rev to target</div>
+        </button><button class="tab " onclick="switchTab('ANZ')" id="tab-ANZ">
+          <span style="font-size:18px;margin-bottom:4px">🇦🇺</span>
+          <span class="tab-label">ANZ</span>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:4px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>
+            <span style="font-size:10px;font-weight:700;color:#15803D">133.3%</span>
+          </div>
+          <div style="font-size:9px;color:#9CA3AF;margin-top:1px">rev to target</div>
+        </button><button class="tab " onclick="switchTab('NA')" id="tab-NA">
+          <span style="font-size:18px;margin-bottom:4px">🇺🇸</span>
+          <span class="tab-label">NA</span>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:4px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>
+            <span style="font-size:10px;font-weight:700;color:#15803D">111.9%</span>
+          </div>
+          <div style="font-size:9px;color:#9CA3AF;margin-top:1px">rev to target</div>
+        </button><button class="tab " onclick="switchTab('UKEU')" id="tab-UKEU">
+          <span style="font-size:18px;margin-bottom:4px">🇬🇧</span>
+          <span class="tab-label">UKEU</span>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:4px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>
+            <span style="font-size:10px;font-weight:700;color:#15803D">137.6%</span>
+          </div>
+          <div style="font-size:9px;color:#9CA3AF;margin-top:1px">rev to target</div>
+        </button>
+    </div>
+
+    <!-- MTD panels -->
+    <div id="panel-global" class="mtd-panel active"><div style="background:#f8f9ff;border:1px solid #4A7C5922;border-radius:14px;padding:16px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="font-size:16px">🌏</span>
+        <span style="font-size:13px;font-weight:800;color:#111827">Global — Month to Date</span>
+      </div>
+      <table width="100%" style="border-collapse:collapse">
+        <thead><tr>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left;width:80px">Metric</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Actual MTD</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Full Month Tgt</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Target</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Proj. Month-End</th>
+          
+        </tr></thead>
+        <tbody><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Revenue</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$4,649,972</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$4,378,407</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>126.6%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$5,544,197</td>
+        
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Spend</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$876,782</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$866,114</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>120.7%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$1,045,394</td>
+        
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">MER %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">18.9%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">19.8%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>95.3%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:95.31963229904456%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">18.9%</td>
+        
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">19,248</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">17,437</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>131.6%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">22,950</td>
+        
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">42.7%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">0.0%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">42.7%</td>
+        
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">CAC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$45.55</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$49.67</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>91.7%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:91.70705016637206%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$45.55</td>
+        
+      </tr></tbody>
+      </table>
+    </div></div>
+    <div id="panel-ANZ"    class="mtd-panel"><div style="background:#f8f9ff;border:1px solid #3B82F622;border-radius:14px;padding:16px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="font-size:16px">🇦🇺</span>
+        <span style="font-size:13px;font-weight:800;color:#111827">ANZ — Month to Date</span>
+      </div>
+      <table width="100%" style="border-collapse:collapse">
+        <thead><tr>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left;width:80px">Metric</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Actual MTD</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Pro-rated Tgt</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Target</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Proj. Month-End</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Full Month</th>
+        </tr></thead>
+        <tbody><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Revenue</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$2,110,877</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$1,583,845</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>133.3%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$2,516,815</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>133.3%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Spend</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$267,511</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$239,319</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>111.8%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$318,955</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>111.8%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">MER %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">12.7%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">15.1%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>83.9%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:83.87144725293265%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">12.7%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>83.9%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">6,406</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">4,807</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>133.3%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">7,638</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>133.3%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">31.1%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">30.0%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">31.1%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">CAC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$41.76</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$49.79</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>83.9%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:83.87246711562888%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$41.76</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>83.9%
+  </span></td>
+      </tr></tbody>
+      </table>
+    </div></div>
+    <div id="panel-NA"     class="mtd-panel"><div style="background:#f8f9ff;border:1px solid #A855F722;border-radius:14px;padding:16px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="font-size:16px">🇺🇸</span>
+        <span style="font-size:13px;font-weight:800;color:#111827">NA — Month to Date</span>
+      </div>
+      <table width="100%" style="border-collapse:collapse">
+        <thead><tr>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left;width:80px">Metric</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Actual MTD</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Pro-rated Tgt</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Target</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Proj. Month-End</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Full Month</th>
+        </tr></thead>
+        <tbody><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Revenue</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$1,458,204</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$1,302,904</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>111.9%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$1,738,628</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>111.9%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Spend</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$361,765</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$306,443</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>118.1%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$431,335</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>118.1%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">MER %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">24.8%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">23.5%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#FFFBEB;color:#B45309;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#F59E0B;display:inline-block"></span>105.5%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#F59E0B;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">24.8%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#FFFBEB;color:#B45309;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#F59E0B;display:inline-block"></span>105.5%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">7,144</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">5,139</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>139.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">8,518</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>139.0%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">56.6%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">50.0%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">56.6%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">CAC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$50.64</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$59.63</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>84.9%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:84.91713676334813%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$50.64</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>84.9%
+  </span></td>
+      </tr></tbody>
+      </table>
+    </div></div>
+    <div id="panel-UKEU"   class="mtd-panel"><div style="background:#f8f9ff;border:1px solid #0EA5E922;border-radius:14px;padding:16px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="font-size:16px">🇬🇧</span>
+        <span style="font-size:13px;font-weight:800;color:#111827">UKEU — Month to Date</span>
+      </div>
+      <table width="100%" style="border-collapse:collapse">
+        <thead><tr>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left;width:80px">Metric</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Actual MTD</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Pro-rated Tgt</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Target</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">Proj. Month-End</th>
+          <th style="padding:6px 12px;font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;text-align:left">vs Full Month</th>
+        </tr></thead>
+        <tbody><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Revenue</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$1,080,890</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$785,463</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>137.6%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$1,288,753</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>137.6%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">Spend</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$247,503</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$180,656</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>137.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$295,100</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>137.0%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">MER %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">22.9%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">23.0%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>99.6%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:99.55694835653813%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">22.9%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>99.6%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">5,698</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">4,679</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>121.8%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">6,794</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>121.8%
+  </span></td>
+      </tr><tr style="background:#F9FAFB">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">NC %</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">47.8%</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">50.0%</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#22C55E;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">47.8%</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#F0FDF4;color:#15803D;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span>100.0%
+  </span></td>
+      </tr><tr style="background:#fff">
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151;width:80px">CAC</td>
+        <td style="padding:10px 12px;font-size:13px;font-weight:800;color:#111827">$43.44</td>
+        <td style="padding:10px 12px;font-size:12px;color:#6B7280">$38.61</td>
+        <td style="padding:10px 12px">
+          <span style="display:inline-flex;align-items:center;gap:4px;background:#FEF2F2;color:#B91C1C;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700">
+            <span style="width:6px;height:6px;border-radius:50%;background:#EF4444;display:inline-block"></span>112.5%
+          </span>
+          <div style="height:3px;background:#E5E7EB;border-radius:3px;margin-top:4px;overflow:hidden">
+            <div style="height:100%;width:100%;background:#EF4444;border-radius:3px"></div>
+          </div>
+        </td>
+        <td style="padding:10px 12px;font-size:12px;font-weight:700;color:#374151">$43.44</td>
+        <td style="padding:10px 12px"><span style="display:inline-flex;align-items:center;gap:4px;background:#FEF2F2;color:#B91C1C;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap">
+    <span style="width:7px;height:7px;border-radius:50%;background:#EF4444;display:inline-block"></span>112.5%
+  </span></td>
+      </tr></tbody>
+      </table>
+    </div></div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 3: INSIGHTS -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+      <div class="section-bar"></div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:#111827">Insights &amp; Opportunities</div>
+        <div style="font-size:11px;color:#9CA3AF;margin-top:2px">AI-generated · Updated daily</div>
+      </div>
+    </div>
+    <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px">
+      <div style="font-size:20px;flex-shrink:0;margin-top:2px">🚀</div>
+      <div>
+        <div style="margin-bottom:7px">
+          <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#15803D;background:#DCFCE7;padding:2px 9px;border-radius:20px">Target Outperformance</span>
+          <span style="font-size:11px;color:#6B7280;font-weight:600;margin-left:8px">🌏 Global</span>
+        </div>
+        <div style="font-size:13px;color:#374151;line-height:1.6">With 84% of May elapsed, global revenue of $4.65M is tracking at 126.6% of target and projecting a $1.16M beat at month-end ($5.54M vs $4.38M target). All three regions are ahead of pro-rated pace, making this one of the strongest months on record — protect spend levels through the final 5 days to lock in the result.</div>
+      </div>
+    </div><div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px">
+      <div style="font-size:20px;flex-shrink:0;margin-top:2px">💚</div>
+      <div>
+        <div style="margin-bottom:7px">
+          <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#15803D;background:#DCFCE7;padding:2px 9px;border-radius:20px">Efficiency Win</span>
+          <span style="font-size:11px;color:#6B7280;font-weight:600;margin-left:8px">🇦🇺 ANZ</span>
+        </div>
+        <div style="font-size:13px;color:#374151;line-height:1.6">ANZ is delivering exceptional capital efficiency with an MTD MER of 12.7% against a 15.1% target, meaning the region is generating more revenue per dollar spent than planned. With the monthly target already secured (negative daily run rate of -$44K), there is headroom to test a modest spend pull-back in ANZ over the final 5 days without risking the target, freeing budget to reinforce NA.</div>
+      </div>
+    </div><div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px">
+      <div style="font-size:20px;flex-shrink:0;margin-top:2px">⚠️</div>
+      <div>
+        <div style="margin-bottom:7px">
+          <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B45309;background:#FEF3C7;padding:2px 9px;border-radius:20px">Spend Efficiency</span>
+          <span style="font-size:11px;color:#6B7280;font-weight:600;margin-left:8px">🇺🇸 NA</span>
+        </div>
+        <div style="font-size:13px;color:#374151;line-height:1.6">NA's MTD MER of 24.8% is running above the 23.5% target, indicating media spend is costing more relative to revenue than planned — and the region still needs $19K/day to hit its full-month target. With 5 days left, the priority should be tightening channel mix toward highest-ROAS placements rather than increasing gross spend to close the gap.</div>
+      </div>
+    </div><div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px">
+      <div style="font-size:20px;flex-shrink:0;margin-top:2px">📈</div>
+      <div>
+        <div style="margin-bottom:7px">
+          <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B91C1C;background:#FEE2E2;padding:2px 9px;border-radius:20px">Acquisition Cost Creep</span>
+          <span style="font-size:11px;color:#6B7280;font-weight:600;margin-left:8px">🇬🇧 UKEU</span>
+        </div>
+        <div style="font-size:13px;color:#374151;line-height:1.6">UKEU's MTD CAC of $43 has already breached its $39 target, and today's daily CAC of $38 shows no meaningful improvement. Despite strong revenue outperformance (137.6% of pro-rated target), rising acquisition costs suggest the incremental customers being acquired are coming at a premium — audit top-of-funnel creative and audience overlap before the final push.</div>
+      </div>
+    </div><div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px">
+      <div style="font-size:20px;flex-shrink:0;margin-top:2px">🌐</div>
+      <div>
+        <div style="margin-bottom:7px">
+          <span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#B91C1C;background:#FEE2E2;padding:2px 9px;border-radius:20px">Site Alignment</span>
+          <span style="font-size:11px;color:#6B7280;font-weight:600;margin-left:8px">🌏 Global</span>
+        </div>
+        <div style="font-size:13px;color:#374151;line-height:1.6">All three storefronts are running identical generic hero messaging with no active promotions or new arrivals on a Tuesday mid-week session, leaving conversion uplift potential on the table during a high-traffic month-end window. With strong momentum and no pricing risk to margin, a limited-time new arrival drop or curated 'Best of Bamboo' feature could accelerate the final 5-day revenue push across ANZ, NA, and UKEU simultaneously.</div>
+      </div>
+    </div>
+
+    <div class="divider" style="background:linear-gradient(90deg,transparent,#E0E7FF 30%,#E0E7FF 70%,transparent)"></div>
+
+    <!-- SECTION 4: SITE PULSE -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+      <div class="section-bar"></div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:#111827">Site Pulse</div>
+        <div style="font-size:11px;color:#9CA3AF;margin-top:2px">Scraped at report time · Homepage, new arrivals &amp; promos</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px">
+      <div style="border:1px solid #3B82F622;border-radius:14px;overflow:hidden">
+        <div style="background:linear-gradient(135deg,#1A3A5C 0%,#3B82F644 100%);padding:14px 16px">
+          <div style="font-size:10px;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;margin-bottom:4px">🇦🇺 ANZ · boody.com.au</div>
+          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.3">Comfortable & Sustainable Bamboo Clothes</div>
+          <span style="display:inline-block;margin-top:8px;font-size:9px;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:2px 8px;border-radius:20px">Campaign</span>
+        </div>
+        <div style="background:#fff;padding:12px 16px">
+          <div style="font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;margin-bottom:8px">New Arrivals</div>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px"><span style="width:5px;height:5px;border-radius:50%;background:#3B82F6;display:inline-block"></span><span style="font-size:12px;color:#374151">(No new arrivals detected)</span></div>
+          <div style="margin-top:10px;padding:8px 10px;border-radius:8px;background:#EFF6FF;border:1px solid #eee">
+            <span style="font-size:12px">🚚</span>
+            <span style="font-size:11px;font-weight:700;color:#1D4ED8;margin-left:6px">No active promotion detected</span>
+          </div>
+        </div>
+      </div>
+    </div><div style="flex:1;min-width:200px">
+      <div style="border:1px solid #A855F722;border-radius:14px;overflow:hidden">
+        <div style="background:linear-gradient(135deg,#3B1F3A 0%,#A855F744 100%);padding:14px 16px">
+          <div style="font-size:10px;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;margin-bottom:4px">🇺🇸 NA · boody.com</div>
+          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.3">Comfortable & Sustainable Bamboo Clothes</div>
+          <span style="display:inline-block;margin-top:8px;font-size:9px;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:2px 8px;border-radius:20px">Campaign</span>
+        </div>
+        <div style="background:#fff;padding:12px 16px">
+          <div style="font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;margin-bottom:8px">New Arrivals</div>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px"><span style="width:5px;height:5px;border-radius:50%;background:#A855F7;display:inline-block"></span><span style="font-size:12px;color:#374151">(No new arrivals detected)</span></div>
+          <div style="margin-top:10px;padding:8px 10px;border-radius:8px;background:#EFF6FF;border:1px solid #eee">
+            <span style="font-size:12px">🚚</span>
+            <span style="font-size:11px;font-weight:700;color:#1D4ED8;margin-left:6px">No active promotion detected</span>
+          </div>
+        </div>
+      </div>
+    </div><div style="flex:1;min-width:200px">
+      <div style="border:1px solid #0EA5E922;border-radius:14px;overflow:hidden">
+        <div style="background:linear-gradient(135deg,#1F3040 0%,#0EA5E944 100%);padding:14px 16px">
+          <div style="font-size:10px;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;margin-bottom:4px">🇬🇧 UKEU · boody.co.uk</div>
+          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.3">Comfortable & Sustainable Bamboo Clothes</div>
+          <span style="display:inline-block;margin-top:8px;font-size:9px;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:2px 8px;border-radius:20px">Campaign</span>
+        </div>
+        <div style="background:#fff;padding:12px 16px">
+          <div style="font-size:10px;font-weight:800;color:#9CA3AF;text-transform:uppercase;margin-bottom:8px">New Arrivals</div>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px"><span style="width:5px;height:5px;border-radius:50%;background:#0EA5E9;display:inline-block"></span><span style="font-size:12px;color:#374151">(No new arrivals detected)</span></div>
+          <div style="margin-top:10px;padding:8px 10px;border-radius:8px;background:#EFF6FF;border:1px solid #eee">
+            <span style="font-size:12px">🚚</span>
+            <span style="font-size:11px;font-weight:700;color:#1D4ED8;margin-left:6px">No active promotion detected</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- FOOTER -->
+    <div style="margin-top:36px;padding-top:20px;border-top:1px solid #F0EDE4;display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <div style="font-size:10px;color:#9CA3AF;font-weight:600">Generated Thursday, 28 May 2026 at 2:53 pm</div>
+        <div style="font-size:10px;color:#CBD5E1;margin-top:3px">Boody Mission Control · Spend may lag 1–2 days</div>
+      </div>
+      <div class="serif" style="font-size:18px;font-weight:800;color:#4A7C59">boody.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleRegion(r) {
+    const body = document.getElementById('body-' + r);
+    const chev = document.getElementById('chev-' + r);
+    body.classList.toggle('open');
+    chev.classList.toggle('open');
+  }
+  function switchTab(r) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.mtd-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + r).classList.add('active');
+    document.getElementById('panel-' + r).classList.add('active');
+  }
+</script>
+</body>
+</html>
